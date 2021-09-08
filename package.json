@@ -2,6 +2,7 @@
   "name": "Resume",
   "version": "1.0.0",
   "private": true,
+  "author": "Nadthaphon Changchai",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -19,6 +20,7 @@
     "@nuxtjs/vuetify": "^1.12.1",
     "eslint-config-prettier": "^8.3.0",
     "gh-pages": "^3.2.3",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "push-dir": "^0.4.1"
   }
 }
