@@ -38,7 +38,7 @@
                 <v-list two-line>
                   <v-list-item>
                     <v-list-item-icon>
-                      <v-icon color="primary">mdi-account-box-outline</v-icon>
+                      <v-icon color="indigo">mdi-account-box-outline</v-icon>
                     </v-list-item-icon>
 
                     <v-list-item-content>
@@ -52,7 +52,7 @@
                   </v-list-item>
                   <v-list-item>
                     <v-list-item-icon>
-                      <v-icon color="primary">mdi-human-cane</v-icon>
+                      <v-icon color="green">mdi-human-cane</v-icon>
                     </v-list-item-icon>
 
                     <v-list-item-content>
@@ -65,7 +65,7 @@
 
                   <v-list-item>
                     <v-list-item-icon>
-                      <v-icon color="primary">mdi-gender-male</v-icon>
+                      <v-icon color="orange">mdi-gender-male</v-icon>
                     </v-list-item-icon>
 
                     <v-list-item-content>

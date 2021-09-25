@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: true,
+      drawer: false,
       fixed: false,
       items: [
         {
@@ -61,14 +61,14 @@ export default {
           to: { name: 'app' },
         },
         {
-          icon: 'mdi-school',
-          title: 'Studies',
-          to: { name: 'app-studies' },
+          icon: 'mdi-chart-gantt',
+          title: 'Timeline',
+          to: { name: 'app-timeline' },
         },
         {
           icon: 'mdi-briefcase',
-          title: 'Work & Experience',
-          to: { name: 'app-worknex' },
+          title: 'Skill',
+          to: { name: 'app-skill' },
         },
         {
           icon: 'mdi-account-box',

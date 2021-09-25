@@ -6,8 +6,8 @@
         <div class="menu">
           <ul class="navMenu">
             <li><a @click="linkTo('home')">Home</a></li>
-            <li><a @click="linkTo('studies')">Studies</a></li>
-            <li><a @click="linkTo('worknex')">Experience</a></li>
+            <li><a @click="linkTo('timeline')">Timeline</a></li>
+            <li><a @click="linkTo('skill')">Skill</a></li>
             <li><a @click="linkTo('contact')">Contact</a></li>
             <li><a>Registration</a></li>
           </ul>
@@ -25,14 +25,13 @@
           >Go to main page</v-btn
         >
         <div class="m-menu" style="display: none">
-          <ul class="m-navMenu">
+          <ul class="m-navMenu" style="list-style: none; padding-left: 0px">
             <li class="m"><a @click="linkTo('home')">Home</a></li>
-            <li class="m"><a @click="linkTo('studies')">Studies</a></li>
+            <li class="m"><a @click="linkTo('timeline')">Timeline</a></li>
             <li class="m">
-              <a @click="linkTo('worknex')">Experience</a>
+              <a @click="linkTo('skill')">Skill</a>
             </li>
             <li class="m"><a @click="linkTo('contact')">Contact</a></li>
-            <li class="m"><a>Registration</a></li>
           </ul>
         </div>
       </div>
@@ -40,29 +39,17 @@
     <v-dialog
       transition="dialog-bottom-transition"
       v-model="dialog"
-      persistent
-      max-width="600"
+      max-width="360"
     >
       <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
-          Privacy Policy
-        </v-card-title>
-
-        <v-card-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <v-card-text class="text-h5 pt-6" style="text-align: center">
+          Click accept if you annoyed
         </v-card-text>
 
-        <v-divider></v-divider>
-
         <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="primary" @click="acceptCookie()"> I accept </v-btn>
+          <v-btn block color="primary" @click="acceptCookie()">
+            I accept
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
