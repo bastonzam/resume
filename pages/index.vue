@@ -2,12 +2,12 @@
   <div class="wrapper">
     <div class="Container">
       <div class="nav">
-        <div class="logo">LOGO</div>
+        <div class="logo">PORTFOLIO</div>
         <div class="menu">
           <ul class="navMenu">
             <li><a @click="linkTo('home')">Home</a></li>
             <li><a @click="linkTo('studies')">Studies</a></li>
-            <li><a @click="linkTo('worknex')">Work & Experience</a></li>
+            <li><a @click="linkTo('worknex')">Experience</a></li>
             <li><a @click="linkTo('contact')">Contact</a></li>
             <li><a>Registration</a></li>
           </ul>
@@ -16,7 +16,12 @@
       <div class="header">
         <h1>Welcome!</h1>
         <p>Portfolio | Nadthaphon</p>
-        <v-btn color="primary" x-large type="button" :to="{ name: 'app' }"
+        <v-btn
+          color="#b69b7d"
+          style="color: #fff"
+          x-large
+          type="button"
+          @click="linkTo('home')"
           >Go to main page</v-btn
         >
         <div class="m-menu" style="display: none">
@@ -24,7 +29,7 @@
             <li class="m"><a @click="linkTo('home')">Home</a></li>
             <li class="m"><a @click="linkTo('studies')">Studies</a></li>
             <li class="m">
-              <a @click="linkTo('worknex')">Work & Experience</a>
+              <a @click="linkTo('worknex')">Experience</a>
             </li>
             <li class="m"><a @click="linkTo('contact')">Contact</a></li>
             <li class="m"><a>Registration</a></li>
@@ -83,11 +88,10 @@ export default {
       localStorage.setItem('fakeCookie', 'true')
     },
     linkTo(v) {
-      console.log(v)
       if (v === 'home') {
-        this.$router.push({ name: 'app' })
+        this.$router.replace({ name: 'app' })
       } else {
-        this.$router.push({ name: `app-${v}` })
+        this.$router.replace({ name: `app-${v}` })
       }
     },
   },

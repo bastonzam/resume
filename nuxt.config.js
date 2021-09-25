@@ -29,7 +29,7 @@ export default {
     ],
   },
   target: 'static',
-  loading: { color: '#81d4fa' },
+  loading: { color: '#ef0078' },
   generate: {
     routes: function () {
       return ['/resume/']
@@ -47,7 +47,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/custom.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -77,8 +77,8 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#81d4fa',
-          accent: '#e1f5fe',
+          primary: '#565c5e',
+          accent: '#fbe2f0',
           secondary: '#424242',
           info: '#00bcd4',
           warning: '#fff59d',
