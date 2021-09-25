@@ -13,7 +13,7 @@
                 src="https://i.ibb.co/p0bXFdH/26220691-2453428464882695-162313541230933688-o.jpg"
               />
             </v-avatar>
-            <p class="ml-3" style="color: #565c5e; font-size: 2em">
+            <p class="ml-3" style="color: #565c5e; font-size: 1.2em">
               Nadthaphon Changchai
             </p>
           </v-card-title>
