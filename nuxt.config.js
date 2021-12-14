@@ -21,11 +21,11 @@ export default {
       },
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/resume/favicon.ico',
-      },
+      // {
+      //   rel: 'icon',
+      //   type: 'image/x-icon',
+      //   href: '/resume/favicon.ico',
+      // },
     ],
   },
   target: 'static',
