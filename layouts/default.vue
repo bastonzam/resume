@@ -75,7 +75,7 @@ export default {
       drawer: false,
       fixed: false,
       imgSRC:
-        'https://images.unsplash.com/photo-1646361700146-855e94bb6ce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+        'https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80',
       dark: false,
       items: [
         {
