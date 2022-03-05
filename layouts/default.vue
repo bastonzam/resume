@@ -6,7 +6,7 @@
         :mini-variant="miniVariant"
         :clipped="clipped"
         fixed
-        src="https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
+        :src="imgSRC"
         app
         ><v-list-item class="px-2">
           <v-list-item-title class="text-h6">
@@ -33,6 +33,26 @@
       </v-navigation-drawer>
       <v-app-bar :clipped-left="clipped" fixed app>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+        <v-spacer></v-spacer>
+        <div>
+          <v-tooltip v-if="!$vuetify.theme.dark" bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" color="info" small fab @click="darkMode">
+                <v-icon class="mr-1">mdi-moon-waxing-crescent</v-icon>
+              </v-btn>
+            </template>
+            <span>Dark Mode On</span>
+          </v-tooltip>
+
+          <v-tooltip v-else bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" color="info" small fab @click="darkMode">
+                <v-icon color="yellow">mdi-white-balance-sunny</v-icon>
+              </v-btn>
+            </template>
+            <span>Dark Mode Off</span>
+          </v-tooltip>
+        </div>
       </v-app-bar>
       <v-main>
         <v-container>
@@ -54,6 +74,9 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
+      imgSRC:
+        'https://images.unsplash.com/photo-1646361700146-855e94bb6ce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      dark: false,
       items: [
         {
           icon: 'mdi-home',
@@ -82,12 +105,29 @@ export default {
       title: 'Vuetify.js',
     }
   },
+  methods: {
+    darkMode() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      this.dark = !this.dark
+    },
+  },
+  watch: {
+    dark(v) {
+      if (!v) {
+        this.imgSRC =
+          'https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80'
+      } else {
+        this.imgSRC =
+          'https://images.unsplash.com/photo-1646361700146-855e94bb6ce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
+      }
+    },
+  },
 }
 </script>
 <style>
-.v-list .v-list-item--active {
+/* .v-list .v-list-item--active {
   color: #93634a !important;
-}
+} */
 .theme--light.v-application {
   background: #f5f5f5;
 }
