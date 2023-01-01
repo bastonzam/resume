@@ -18,7 +18,10 @@
             </p>
           </v-card-title>
         </v-img>
+        <div style="text-align:right;margin-top: 1rem;padding-right: 1rem;"> <v-btn elevation="2" color="primary" @click="downloadItem()">Download Resume</v-btn></div>
+       
         <v-card-title>About me</v-card-title>
+      
         <div v-for="(v, k) in info" :key="k">
           <v-card-actions>
             <v-card-subtitle>
@@ -101,6 +104,19 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    downloadItem() {
+      fetch('resume/file/cv.png').then((response) => {
+        response.blob().then((blob) => {
+          const fileURL = window.URL.createObjectURL(blob)
+          let alink = document.createElement('a')
+          alink.href = fileURL
+          alink.download = 'resume.png'
+          alink.click()
+        })
+      })
+    },
   },
 }
 </script>

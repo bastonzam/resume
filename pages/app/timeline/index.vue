@@ -52,7 +52,7 @@ export default {
         },
         {
           color: 'green',
-          year: '20010-2016',
+          year: '2010-2016',
           school: 'Pakkhat Pittayakom School (PKK)',
           detail: `My second school I moved here because I wanted to change my perspective on studying. Being at this school made me realize that there are many talented people out there. That's why I started to improve myself and find something I like. Middle school was a time of great change.Whether physically or emotionally I joined the computer club for the first time (because I wanted to play games), but I didn't like it.In high school, I was in a short film club and I really liked it. Until thinking of wanting to continue making short films But then there was a high school web writing competition and I won. So I like computers again and again.`,
         },

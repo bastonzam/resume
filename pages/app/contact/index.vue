@@ -25,11 +25,12 @@
             <!-- Nadthaphon Changchai (Ae), <br />
             158/22 Baan Sookcharoen Apartment,Soi Therd-Thai 33,<br />
             Talad Plue, Thonburi, Bangkok, 10600 Thailand <br /> -->
-            Mobile: +668 1102 8375 | Email<span
-              style="cursor: pointer"
+           
+            Mobile:  <a style="color:rgba(0, 0, 0, 0.6)" href="tel:+66811028375">+668 1102 8375</a> | Email  : <span
+              style="cursor: pointer;text-decoration: underline;"
               @click="sendMail()"
             >
-              : nadthaphonc@gmail.com</span
+            nadthaphonc@gmail.com</span
             >
           </v-card-text>
         </v-card>
@@ -43,19 +44,19 @@ export default {
     return {
       items: [
         {
-          color: '#238636',
+          color: '#EB455F',
           src: 'https://i.ibb.co/5YKChJs/20292898-1240532989409434-330607457384079060-n-2.png',
           title: 'GitHub',
           name: 'bastonzam',
         },
         {
-          color: '#0099fe',
+          color: '#FF597B',
           src: 'https://i.ibb.co/p0bXFdH/26220691-2453428464882695-162313541230933688-o.jpg',
           title: 'Facebook',
           name: 'Nadthaphon Changchai',
         },
         {
-          color: '#d30066',
+          color: '#FF8E9E',
           src: 'https://i.ibb.co/0V27rtL/126958541-3424758317749700-9204153798471885330-n.jpg',
           title: 'Instagram',
           name: 'bastonzam',

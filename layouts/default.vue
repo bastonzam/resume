@@ -37,8 +37,8 @@
         <div>
           <v-tooltip v-if="!$vuetify.theme.dark" bottom>
             <template v-slot:activator="{ on }">
-              <v-btn v-on="on" color="info" small fab @click="darkMode">
-                <v-icon class="mr-1">mdi-moon-waxing-crescent</v-icon>
+              <v-btn v-on="on" color="#181D31" small fab @click="darkMode">
+                <v-icon color="#FFFFD0" class="mr-1">mdi-moon-waxing-crescent</v-icon>
               </v-btn>
             </template>
             <span>Dark Mode On</span>
@@ -46,8 +46,8 @@
 
           <v-tooltip v-else bottom>
             <template v-slot:activator="{ on }">
-              <v-btn v-on="on" color="info" small fab @click="darkMode">
-                <v-icon color="yellow">mdi-white-balance-sunny</v-icon>
+              <v-btn v-on="on" color="#82C3EC" small fab @click="darkMode">
+                <v-icon color="#FFEBB7">mdi-white-balance-sunny</v-icon>
               </v-btn>
             </template>
             <span>Dark Mode Off</span>
@@ -68,12 +68,14 @@
 </template>
 
 <script>
+import SnowFall from "snow-fall-effect";
 export default {
   data() {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
+      snowFall:"",
       imgSRC:
         'https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80',
       dark: false,
@@ -105,10 +107,26 @@ export default {
       title: 'Vuetify.js',
     }
   },
+  mounted() {
+    this.snowFall = new SnowFall({
+        color: this.dark ? "#F1F6F5" : "#7FE9DE",
+        density: 6,
+        sizeRange: [5, 25],
+      });
+      this.snowFall.init();
+  },
   methods: {
     darkMode() {
+      this.snowFall.stopTheSnowing()
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
       this.dark = !this.dark
+      this.snowFall = new SnowFall({
+        color: this.dark ? "#F1F6F5" : "#7FE9DE",
+        density: 6,
+        sizeRange: [5, 25],
+      });
+      this.snowFall.init();
+ 
     },
   },
   watch: {

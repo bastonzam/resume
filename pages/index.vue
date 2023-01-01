@@ -9,7 +9,7 @@
             <li><a @click="linkTo('timeline')">Timeline</a></li>
             <li><a @click="linkTo('skill')">Skill</a></li>
             <li><a @click="linkTo('contact')">Contact</a></li>
-            <li><a>Registration</a></li>
+            <!-- <li><a>Registration</a></li> -->
           </ul>
         </div>
       </div>
