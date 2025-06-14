@@ -9,12 +9,8 @@
               <v-card-subtitle class="text--secondary" v-text="item.name"></v-card-subtitle>
             </div>
             <v-avatar class=" ma-3" size="125">
-              <v-img
-                style="cursor: pointer"
-                @click="gotoSpecificPage(item.title)"
-                :alt="item.name"
-                :src="item.src"
-              ></v-img>
+              <v-img style="cursor: pointer" @click="gotoSpecificPage(item.title)" :alt="item.name"
+                :src="item.src"></v-img>
             </v-avatar>
           </div>
         </v-card>
@@ -27,10 +23,7 @@
             <a style="color: rgba(0,0,0,0.6);" href="tel:+66811028375">+668 1102 8375</a>
             |
             Email:
-            <span
-              style="cursor: pointer; text-decoration: underline; color: rgba(0,0,0,0.6);"
-              @click="sendMail()"
-            >
+            <span style="cursor: pointer; text-decoration: underline; color: rgba(0,0,0,0.6);" @click="sendMail()">
               nadthaphonc@gmail.com
             </span>
           </v-card-text>

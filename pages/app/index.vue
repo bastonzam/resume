@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       profileImage: 'resume/Image/profile2x.png',
-      bannerImage: 'https://images.unsplash.com/photo-1629904888099-00285934292b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      bannerImage: 'https://images.unsplash.com/photo-1546146830-2cca9512c68e?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       showItems: [true],
       info: [
         {
@@ -105,23 +105,23 @@ export default {
     personalInfoItems(info) {
       return [
         {
-        icon: 'mdi-account-outline',  // minimal กว่า mdi-account-box-outline
-        color: 'grey',
-        label: 'Name',
-        value: `${info.name} ${info.lastname}`,
-      },
-      {
-        icon: 'mdi-calendar-blank-outline',  // แทน human-cane
-        color: 'grey',
-        label: 'Age',
-        value: `${info.age} years`,
-      },
-      {
-        icon: 'mdi-gender-male-female',  // ใช้ไอคอนรวมเพศที่เรียบกว่า
-        color: 'grey',
-        label: 'Sex',
-        value: info.gender,
-      },
+          icon: 'mdi-account-outline',  // minimal กว่า mdi-account-box-outline
+          color: 'grey',
+          label: 'Name',
+          value: `${info.name} ${info.lastname}`,
+        },
+        {
+          icon: 'mdi-calendar-blank-outline',  // แทน human-cane
+          color: 'grey',
+          label: 'Age',
+          value: `${info.age} years`,
+        },
+        {
+          icon: 'mdi-gender-male-female',  // ใช้ไอคอนรวมเพศที่เรียบกว่า
+          color: 'grey',
+          label: 'Sex',
+          value: info.gender,
+        },
       ];
     },
   },

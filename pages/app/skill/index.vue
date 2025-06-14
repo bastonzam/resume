@@ -1,34 +1,15 @@
 <template>
-  <v-container class="neu-container pa-6" style="background: #f9f9f9; min-height: 100vh;">
-  <v-card class="neu-card pa-6" max-width="100%">
+  <v-container class="neu-container" style="background: #f9f9f9; min-height: 100vh;">
     <v-row justify="space-around">
-      <v-expansion-panels
-        class="neu-section mb-6 pa-4"
-        v-model="panel"
-        multiple
-      >
-        <v-expansion-panel
-          v-for="(item, i) in templates"
-          :key="i"
-          class="neu-inner mb-4"
-        >
-          <v-expansion-panel-header
-            class="text-h5 font-weight-bold"
-            expand-icon="mdi-menu-down"
-          >
+      <v-expansion-panels class="neu-section mb-6 " v-model="panel" multiple>
+        <v-expansion-panel v-for="(item, i) in templates" :key="i" class="neu-inner mb-4">
+          <v-expansion-panel-header class="text-h5 font-weight-bold" expand-icon="mdi-menu-down">
             {{ item.label }}
           </v-expansion-panel-header>
           <v-expansion-panel-content class="pa-4">
             <template v-for="(v, k) in skills">
-              <v-slider
-                readonly
-                v-model="point[k]"
-                :label="v.label"
-                color="#666666"
-                track-color="#dddddd"
-                thumb-color="#444444"
-                thumb-label="always"
-              ></v-slider>
+              <v-slider readonly v-model="point[k]" :label="v.label" color="#666666" track-color="#dddddd"
+                thumb-color="#444444" thumb-label="always"></v-slider>
             </template>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -36,19 +17,9 @@
     </v-row>
 
     <v-row justify="space-around">
-      <v-expansion-panels
-        class="neu-section pa-4"
-        v-model="panel2"
-      >
-        <v-expansion-panel
-          v-for="(item, i) in templates2"
-          :key="i"
-          class="neu-inner mb-4"
-        >
-          <v-expansion-panel-header
-            class="text-h5 font-weight-bold"
-            expand-icon="mdi-menu-down"
-          >
+      <v-expansion-panels class="neu-section pa-4" v-model="panel2">
+        <v-expansion-panel v-for="(item, i) in templates2" :key="i" class="neu-inner mb-4">
+          <v-expansion-panel-header class="text-h5 font-weight-bold" expand-icon="mdi-menu-down">
             {{ item.label }}
           </v-expansion-panel-header>
           <v-expansion-panel-content class="pa-4">
@@ -62,7 +33,6 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </v-row>
-  </v-card>
   </v-container>
 </template>
 

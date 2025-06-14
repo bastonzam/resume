@@ -16,13 +16,7 @@
       <div class="header">
         <h1>Welcome!</h1>
         <p>Portfolio | Nadthaphon</p>
-        <v-btn
-        class="neu-btn"
-          x-large
-          type="button"
-          @click="linkTo('home')"
-          >Go to main page</v-btn
-        >
+        <v-btn class="neu-btn" x-large type="button" @click="linkTo('home')">Go to main page</v-btn>
         <div class="m-menu" style="display: none">
           <ul class="m-navMenu" style="list-style: none; padding-left: 0px">
             <li class="m"><a @click="linkTo('home')">Home</a></li>
@@ -35,11 +29,7 @@
         </div>
       </div>
     </div>
-    <v-dialog
-      transition="dialog-bottom-transition"
-      v-model="dialog"
-      max-width="360"
-    >
+    <v-dialog transition="dialog-bottom-transition" v-model="dialog" max-width="360">
       <v-card>
         <v-card-text class="text-h5 pt-6" style="text-align: center">
           Click accept if you annoyed
@@ -91,6 +81,7 @@ export default {
   font-size: 10px;
   scroll-behavior: smooth;
 }
+
 .wrapper {
   width: auto;
   height: 100vh;
@@ -99,6 +90,7 @@ export default {
   background-repeat: no-repeat;
   backdrop-filter: opacity(80%);
 }
+
 .Container {
   width: 100%;
   height: 100%;
@@ -106,6 +98,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .nav {
   position: fixed;
   top: 0;
@@ -118,6 +111,7 @@ export default {
   align-items: center;
   padding: 0 50px;
 }
+
 .logo {
   font-size: 2.5rem;
   font-weight: 600;
@@ -125,10 +119,12 @@ export default {
   color: white;
   margin: 4%;
 }
+
 .menu {
   display: inline-block;
   line-height: 80px;
 }
+
 .menu ul {
   list-style: none;
   display: flex;
@@ -136,9 +132,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .menu ul li {
   display: inline-block;
 }
+
 .menu ul li a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -151,12 +149,15 @@ export default {
   margin: 0 5px;
   transition: 0.5s ease;
 }
+
 .menu ul li a:hover {
   border-color: white;
 }
+
 .header {
   text-align: center;
 }
+
 .header h1 {
   font-size: 4rem;
   font-weight: 600;
@@ -164,6 +165,7 @@ export default {
   color: white;
   padding: 45% 20px 8px;
 }
+
 .header p {
   font-size: 1.5rem;
   font-weight: 600;
@@ -171,18 +173,22 @@ export default {
   color: white;
   padding: 10px 15px;
 }
+
 @media only screen and (max-width: 768px) {
   div.menu {
     display: none;
   }
+
   div.nav {
     width: 100%;
     place-content: center;
   }
+
   div.m-menu {
     display: block !important;
     margin-top: 2rem;
   }
+
   .m a {
     font-size: 20px !important;
     text-decoration: none !important;
