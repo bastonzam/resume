@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/app/timeline", {data:[{}],fetch:{},mutations:void 0});
