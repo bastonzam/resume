@@ -17,8 +17,7 @@
         <h1>Welcome!</h1>
         <p>Portfolio | Nadthaphon</p>
         <v-btn
-          color="#b69b7d"
-          style="color: #fff"
+        class="neu-btn"
           x-large
           type="button"
           @click="linkTo('home')"
@@ -155,14 +154,6 @@ export default {
 .menu ul li a:hover {
   border-color: white;
 }
-/* .menu ul li:nth-child(5) a {
-  color: #81d4fa;
-  border: 1px solid #81d4fa;
-}
-.menu ul li:nth-child(5) a:hover {
-  color: black;
-  background-color: #81d4fa;
-} */
 .header {
   text-align: center;
 }

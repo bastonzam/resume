@@ -50,7 +50,7 @@ export default {
   css: ['~/assets/custom.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/snow-fall.plugin.js', mode: 'client' }],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -85,19 +85,7 @@ export default {
           success: '#81c784',
           text: '#fff',
         },
-      },
-      themes: {
-        dark: {
-          primary: '#565c5e',
-          accent: '#fbe2f0',
-          secondary: '#424242',
-          info: '#00bcd4',
-          warning: '#fff59d',
-          error: '#ff6e40',
-          success: '#81c784',
-          text: '#fff',
-        },
-      },
+      }
     },
   },
 

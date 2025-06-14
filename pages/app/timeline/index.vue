@@ -1,28 +1,20 @@
 <template>
-  <v-container>
-    <v-row justify="space-around">
-      <v-card width="100%">
+  <v-container class="neu-container pa-6" style="background: #f9f9f9; min-height: 100vh;">
+    <v-row justify="center">
+      <v-card class="neu-card pa-6" max-width="100%">
         <v-card-text>
           <v-timeline>
-            <v-timeline-item
-              v-for="(year, i) in years"
-              :key="i"
-              :color="year.color"
-              small
-            >
+            <v-timeline-item v-for="(year, i) in years" :key="i" small class="neu-timeline-item">
               <template v-slot:opposite>
-                <span
-                  :class="`headline font-weight-bold ${year.color}--text`"
-                  v-text="year.year"
-                ></span>
+                <span class="timeline-year" :style="{ color: year.color }">
+                  {{ year.year }}
+                </span>
               </template>
               <div class="py-4">
-                <h2
-                  :class="`headline font-weight-light mb-4 ${year.color}--text`"
-                >
+                <h2 class="timeline-school" :style="{ color: year.color }">
                   {{ year.school }}
                 </h2>
-                <div>
+                <div class="timeline-detail">
                   {{ year.detail }}
                 </div>
               </div>
@@ -33,37 +25,46 @@
     </v-row>
   </v-container>
 </template>
+
 <script>
 export default {
   data() {
     return {
       years: [
         {
-          color: 'orange',
-          year: '2020-Now',
-          school: 'KERRY EXPRESS (THAILAND) PUBLIC COMPANY LIMITED',
+          color: '#ff7043',
+          year: '2023-NOW',
+          school: 'ttb spark | ttb bank',
           detail: `I am now an employee here.`,
         },
         {
-          color: 'pink',
+          color: '#ff7043',
+          year: '2020-2023',
+          school: 'KERRY EXPRESS (THAILAND) PUBLIC COMPANY LIMITED',
+          detail: `I worked as a Software Developer responsible for developing various systems for the company such as tracking systems, CMS, and other internal tools to improve operational efficiency.`,
+        },
+        {
+          color: '#f48fb1',
           year: '2016-2020',
           school: 'Suranaree University of Technology (SUT)',
-          detail: `I studied computer engineering because I was confident that I had a fair knowledge of physics and mathematics. But my first year of college made me realize that I was wrong.I got an F grade on Calculus One. I was discouraged, but I fought until I got a B-plus in calculus two and three. As for the subject, I like making applications. And do projects by making application delivery I just learned how making a website during my internship. And made a website until now`,
+          detail: `Studied computer engineering. Initially struggled with calculus but improved significantly. Enjoyed making applications and developed websites during internships.`,
         },
         {
-          color: 'green',
+          color: '#81c784',
           year: '2010-2016',
           school: 'Pakkhat Pittayakom School (PKK)',
-          detail: `My second school I moved here because I wanted to change my perspective on studying. Being at this school made me realize that there are many talented people out there. That's why I started to improve myself and find something I like. Middle school was a time of great change.Whether physically or emotionally I joined the computer club for the first time (because I wanted to play games), but I didn't like it.In high school, I was in a short film club and I really liked it. Until thinking of wanting to continue making short films But then there was a high school web writing competition and I won. So I like computers again and again.`,
+          detail: `Attended middle and high school here. Joined computer and short film clubs. Discovered a passion for computers and creative projects.`,
         },
         {
-          color: 'cyan',
+          color: '#4dd0e1',
           year: '2005-2010',
           school: 'Khok sa-at School (KS)',
-          detail: `I started my first study here. And here is a good elementary period. Because it's close to home Makes sneaking home easy. When I was studying here, I was a kid, so thinking about studying wasn't the main point. And at that time I felt that I was very hot, focusing more on playing.`,
+          detail: `Elementary school years. Focused more on playing than studying but had a good foundation close to home.`,
         },
-      ],
+      ]
+      ,
     }
   },
 }
 </script>
+
